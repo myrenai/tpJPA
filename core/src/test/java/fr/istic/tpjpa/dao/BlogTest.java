@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.junit.Test;
 
+import fr.istic.sir.tpjpa.domain.Blog;
+import fr.istic.sir.tpjpa.domain.Category;
+import fr.istic.sir.tpjpa.domain.User;
 import fr.istic.tpjpa.Utils;
-import fr.istic.tpjpa.domain.Blog;
-import fr.istic.tpjpa.domain.Category;
-import fr.istic.tpjpa.domain.User;
 
 public class BlogTest extends BaseTest{
 	

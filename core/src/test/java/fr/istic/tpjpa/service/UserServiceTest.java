@@ -10,11 +10,11 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import fr.istic.sir.tpjpa.dao.GenericDao;
+import fr.istic.sir.tpjpa.dao.strategy.ExecuteStrategy;
+import fr.istic.sir.tpjpa.domain.User;
+import fr.istic.sir.tpjpa.service.UserService;
 import fr.istic.tpjpa.Utils;
-import fr.istic.tpjpa.dao.GenericDao;
-import fr.istic.tpjpa.dao.strategy.ExecuteStrategy;
-import fr.istic.tpjpa.domain.User;
-import fr.istic.tpjpa.service.UserService;
 
 public class UserServiceTest {
 	UserService uservice = UserService.singleton;	

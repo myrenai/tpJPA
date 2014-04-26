@@ -7,13 +7,13 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.istic.sir.tpjpa.domain.Blog;
+import fr.istic.sir.tpjpa.domain.Category;
+import fr.istic.sir.tpjpa.domain.User;
+import fr.istic.sir.tpjpa.service.BlogService;
+import fr.istic.sir.tpjpa.service.CategoryService;
+import fr.istic.sir.tpjpa.service.UserService;
 import fr.istic.tpjpa.Utils;
-import fr.istic.tpjpa.domain.Blog;
-import fr.istic.tpjpa.domain.Category;
-import fr.istic.tpjpa.domain.User;
-import fr.istic.tpjpa.service.BlogService;
-import fr.istic.tpjpa.service.CategoryService;
-import fr.istic.tpjpa.service.UserService;
 
 public class BlogServiceTest {
 	BlogService blogService = BlogService.singleton;

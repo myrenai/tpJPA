@@ -8,10 +8,10 @@ import javax.persistence.Persistence;
 import org.junit.After;
 import org.junit.Before;
 
-import fr.istic.tpjpa.dao.BlogDao;
-import fr.istic.tpjpa.dao.CategoryDao;
-import fr.istic.tpjpa.dao.GenericDao;
-import fr.istic.tpjpa.dao.UserDao;
+import fr.istic.sir.tpjpa.dao.BlogDao;
+import fr.istic.sir.tpjpa.dao.CategoryDao;
+import fr.istic.sir.tpjpa.dao.GenericDao;
+import fr.istic.sir.tpjpa.dao.UserDao;
 
 public class BaseTest {
 	

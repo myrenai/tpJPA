@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='fr.istic.sir.gwt.MyBlog' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/MyBlog/greet" class="fr.istic.sir.gwt.server.GreetingServiceImpl" />
+
+</module>

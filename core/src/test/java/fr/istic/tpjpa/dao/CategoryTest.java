@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import fr.istic.sir.tpjpa.domain.Category;
 import fr.istic.tpjpa.Utils;
-import fr.istic.tpjpa.domain.Category;
 
 public class CategoryTest extends BaseTest{
 	

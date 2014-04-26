@@ -6,8 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import fr.istic.sir.tpjpa.domain.User;
 import fr.istic.tpjpa.Utils;
-import fr.istic.tpjpa.domain.User;
 
 public class UserTest extends BaseTest{
 	@Test

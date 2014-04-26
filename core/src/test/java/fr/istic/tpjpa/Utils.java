@@ -2,10 +2,10 @@ package fr.istic.tpjpa;
 
 import java.util.Calendar;
 
-import fr.istic.tpjpa.domain.Address;
-import fr.istic.tpjpa.domain.Blog;
-import fr.istic.tpjpa.domain.Category;
-import fr.istic.tpjpa.domain.User;
+import fr.istic.sir.tpjpa.domain.Address;
+import fr.istic.sir.tpjpa.domain.Blog;
+import fr.istic.sir.tpjpa.domain.Category;
+import fr.istic.sir.tpjpa.domain.User;
 
 public class Utils {
 	public static User makeMockUser(String firstName, String lastName, String userId){
