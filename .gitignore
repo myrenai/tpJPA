@@ -19,7 +19,6 @@ libs/
 lib/
 uml/
 classes/
-.settings/
-.classpath
-.project
 core/data
+
+*~
