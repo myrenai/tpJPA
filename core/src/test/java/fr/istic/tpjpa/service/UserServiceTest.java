@@ -67,6 +67,13 @@ public class UserServiceTest {
 		assertNotNull(user);
 	}
 	
+	@Test
+	public void loginUser(){
+		uservice.createUser(Utils.makeMockUser("Jiyoung", "Park", "myrenai", "1787"));
+		assertEquals(1, uservice.countUser());
+		assertTrue(uservice.login("myrenai", "1787"));
+	}
+	
 	private GenericDao gdao = GenericDao.singleton;
 	
 	@Test

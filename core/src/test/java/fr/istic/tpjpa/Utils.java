@@ -8,7 +8,7 @@ import fr.istic.sir.tpjpa.domain.Category;
 import fr.istic.sir.tpjpa.domain.User;
 
 public class Utils {
-	public static User makeMockUser(String firstName, String lastName, String userId){
+	public static User makeMockUser(String firstName, String lastName, String userId, String userPw){
 		Calendar birthDate = Calendar.getInstance();
 		birthDate.set(1980, 11, 9); 
 		
@@ -19,7 +19,12 @@ public class Utils {
 			.setBirthDate(birthDate.getTime())
 			.setHomeAddress(makeMockAddr("home"))
 			.setOfficeAddress(makeMockAddr("office"))
-			.setUserPw("1787");
+			.setUserPw(userPw);
+	}
+	
+	
+	public static User makeMockUser(String firstName, String lastName, String userId){
+		return makeMockUser(firstName, lastName, userId, "1787");
 	}
 	
 	public static Address makeMockAddr(String type){
@@ -30,7 +35,6 @@ public class Utils {
 				.setNation(type + "Nation");
 		
 	}
-	
 	public static Blog makeMockBlog(User user, String content){
 		return Blog.build()
 				.setUser(user)

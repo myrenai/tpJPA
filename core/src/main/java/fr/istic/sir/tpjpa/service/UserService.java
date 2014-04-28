@@ -75,4 +75,20 @@ public class UserService {
 			}
 		});
 	}
+	
+	public boolean login(final String userid, final String pw){
+		User user = gdao.executeAndReturn(new ExecuteAndReturnObjStrategy(){
+			@Override
+			public <T> T execute() {
+				
+				Map<String, String> params = new HashMap<String, String>();
+				params.put("userId", userid);
+				return gdao.findObj("User.byUserId", params);
+			}
+		});
+		
+		if(user != null && user.getUserPw().equals(pw))
+			return true;
+		return false;
+	}
 }

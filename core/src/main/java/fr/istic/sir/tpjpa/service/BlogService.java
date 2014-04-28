@@ -22,6 +22,17 @@ public class BlogService {
 			@SuppressWarnings("unchecked")
 			@Override
 			public Blog execute() {
+				
+				Map<String, String> params = new HashMap<String, String>();
+				params.put("userId", blog.getUser().getUserId());
+				User user = gdao.findObj("User.byUserId", params);
+				
+				params = new HashMap<String, String>();
+				params.put("category", blog.getCategory().getCategory());
+				Category c = gdao.findObj("Category.byCategory", params);
+				
+				blog.setUser(user).setCategory(c);
+				
 				return (Blog) gdao.mergeObj(blog);
 			}
 		});
@@ -40,8 +51,13 @@ public class BlogService {
 		final List<Blog> blogs = new ArrayList<Blog>();
 		gdao.execute(new ExecuteStrategy(){
 			public void execute() {
+				
 				Map<String, String> params = new HashMap<String, String>();
-				params.put("category_id", c.getId()+ "");
+				params.put("category", c.getCategory());
+				Category category = gdao.findObj("Category.byCategory", params);
+				
+				params = new HashMap<String, String>();
+				params.put("category_id", category.getId()+ "");
 				blogs.addAll(gdao.listObj("Blog.byCategory", params, Blog.class));
 			}
 		});
